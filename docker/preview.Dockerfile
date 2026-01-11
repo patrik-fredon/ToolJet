@@ -32,7 +32,7 @@ COPY ./server/ ./server/
 RUN npm install -g @nestjs/cli
 RUN npm --prefix server run build
 
-FROM node:18.20.7-bullseye
+FROM node:hydrogen-bullseye
 # copy postgrest executable
 COPY --from=postgrest/postgrest:v12.0.2 /bin/postgrest /bin
 
